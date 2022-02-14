@@ -71,6 +71,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-重拾java-java-中的集合" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/14/%E9%87%8D%E6%8B%BEjava-java-%E4%B8%AD%E7%9A%84%E9%9B%86%E5%90%88/" class="article-date">
+  <time class="dt-published" datetime="2022-02-14T15:33:41.000Z" itemprop="datePublished">2022-02-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/14/%E9%87%8D%E6%8B%BEjava-java-%E4%B8%AD%E7%9A%84%E9%9B%86%E5%90%88/">重拾java: jav中的集合（collection）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>Java的中的 集合框架包含两种类型的容器: 集合（collection）,<br>图（map）。</p>
+<p>###集合（collection）<br>collection有三种子类型：List,Set,Queue。 再是一些抽象是实现类。<br>最后是具体实现类。常用的有：ArrayList,LinkedList,HashSet等等、</p>
+<p>###图（map）<br>遍历map的四种方法</p>
+<ol>
+<li>iterator 遍历<br>collection接口要求所有的子类需要实现iterator()方法<br>返回iterator，注意：iterator()方法是java.lang.Iterable接口,被Collection继承。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//通过 Iterator 遍历实现</span><br><span class="line">List&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();</span><br><span class="line">list.add(1);</span><br><span class="line">list.add(2);</span><br><span class="line">list.add(3);</span><br><span class="line">for(Iterator itr = list.listIterator();itr.hasNext();)&#123;</span><br><span class="line">    System.out.println(itr.next());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/02/14/%E9%87%8D%E6%8B%BEjava-java-%E4%B8%AD%E7%9A%84%E9%9B%86%E5%90%88/" data-id="ckznaagug00005wuh58wlasqq" data-title="重拾java: jav中的集合（collection）" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-算法刷题日记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/02/13/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0/" class="article-date">
@@ -93,15 +138,19 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
+        <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><ul>
 <li>152.乘积最大子序列               2/13/2022</li>
 <li>5.最长回文字串                   2/13/2022</li>
+</ul>
+<h3 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h3><ul>
+<li>229.求众数 2/13/2022</li>
+<li></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/13/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0/" data-id="ckzl10ygv0001t4uh3xs1fi4v" data-title="算法刷题日记" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/13/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0/" data-id="ckzna75t50002mcuh6yx1d0gu" data-title="算法刷题日记" class="article-share-link">Share</a>
       
       
       
@@ -174,7 +223,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/07/%E9%87%8D%E6%8B%BEjava%E4%B9%8B%20%E9%87%8D%E5%86%99%EF%BC%88overRide%EF%BC%89%20%E4%B8%8E%20%E9%87%8D%E8%BD%BD%20%EF%BC%88overLoad%EF%BC%89/" data-id="ckzl10yh50003t4uh7ehyeuix" data-title="重新捡起java，一个经典的问题，java中的重写与重载有什么区别？" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/07/%E9%87%8D%E6%8B%BEjava%E4%B9%8B%20%E9%87%8D%E5%86%99%EF%BC%88overRide%EF%BC%89%20%E4%B8%8E%20%E9%87%8D%E8%BD%BD%20%EF%BC%88overLoad%EF%BC%89/" data-id="ckzna75tb0003mcuhhmoegwa1" data-title="重新捡起java，一个经典的问题，java中的重写与重载有什么区别？" class="article-share-link">Share</a>
       
       
       
@@ -235,7 +284,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/28/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/" data-id="ckzl10ygx0002t4uhdbzm6cmq" data-title="学习资源" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/28/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/" data-id="ckzna75t40001mcuhe191090c" data-title="学习资源" class="article-share-link">Share</a>
       
       
       
@@ -286,7 +335,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/28/hello-world/" data-id="ckzl10ygp0000t4uh0yjb5lle" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/28/hello-world/" data-id="ckzna75sx0000mcuh3i5v4mwa" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -334,6 +383,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/02/14/%E9%87%8D%E6%8B%BEjava-java-%E4%B8%AD%E7%9A%84%E9%9B%86%E5%90%88/">重拾java: jav中的集合（collection）</a>
+          </li>
         
           <li>
             <a href="/2022/02/13/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0/">算法刷题日记</a>
