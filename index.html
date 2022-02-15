@@ -71,6 +71,64 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-git-撤销修改的方法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/02/15/git-%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%B9%E6%B3%95/" class="article-date">
+  <time class="dt-published" datetime="2022-02-15T08:13:37.000Z" itemprop="datePublished">2022-02-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/02/15/git-%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%B9%E6%B3%95/">git 撤销修改的方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="git基本概念"><a href="#git基本概念" class="headerlink" title="git基本概念"></a>git基本概念</h2><ul>
+<li><strong>工作区：</strong> 工作目录</li>
+<li><strong>暂存区：</strong> （stage）<code>.git</code>文件夹下的index文件，也叫索引</li>
+<li><strong>版本库：</strong> <code>.git</code>文件夹</li>
+</ul>
+<h2 id="撤销修改的方法"><a href="#撤销修改的方法" class="headerlink" title="撤销修改的方法"></a>撤销修改的方法</h2><p><img src="//www.runoob.com/wp-content/uploads/2015/02/1352126739_7909.jpg" alt="工作区，暂存区，版本库之间的关系"></p>
+<ul>
+<li><p>当对工作区修改（或新增）的文件执行 git add 命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。</p>
+</li>
+<li><p>当执行提交操作（<code>git commit</code>）时，暂存区的目录树写到版本库（对象库）中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。</p>
+</li>
+<li><p>当执行 <code>git reset HEAD</code> 命令时，暂存区的目录树会被重写，被 master 分支指向的目录树所替换，但是工作区不受影响。</p>
+</li>
+<li><p><code>当执行 git rm --cached &lt;file&gt;</code> 命令时，会直接从暂存区删除文件，工作区则不做出改变。</p>
+</li>
+<li><p>当执行 <code>git checkout .</code> 或者 <code>git checkout -- &lt;file&gt;</code> 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区中的改动。</p>
+</li>
+<li><p>当执行 <code>git checkout HEAD .</code> 或者 <code>git checkout HEAD &lt;file&gt;</code> 命令时，会用 HEAD 指向的 master 分支中的全部或者部分文件替换暂存区和以及工作区中的文件。这个命令也是极具危险性的，因为不但会清除工作区中未提交的改动，也会清除暂存区中未提交的改动。</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/02/15/git-%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%B9%E6%B3%95/" data-id="ckznvgnn1000020uhcga1ew3i" data-title="git 撤销修改的方法" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-重拾java-java-中的集合" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/02/14/%E9%87%8D%E6%8B%BEjava-java-%E4%B8%AD%E7%9A%84%E9%9B%86%E5%90%88/" class="article-date">
@@ -104,7 +162,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/14/%E9%87%8D%E6%8B%BEjava-java-%E4%B8%AD%E7%9A%84%E9%9B%86%E5%90%88/" data-id="ckznacxyu0002xwuh5dxs2vfq" data-title="重拾java: jav中的集合（collection）" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/14/%E9%87%8D%E6%8B%BEjava-java-%E4%B8%AD%E7%9A%84%E9%9B%86%E5%90%88/" data-id="ckznvgnn9000420uh7ggwgfb8" data-title="重拾java: jav中的集合（collection）" class="article-share-link">Share</a>
       
       
       
@@ -150,7 +208,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/13/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0/" data-id="ckznacxyv0003xwuh6r9j3gwb" data-title="算法刷题日记" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/13/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0/" data-id="ckznvgnn9000320uhcs98be7d" data-title="算法刷题日记" class="article-share-link">Share</a>
       
       
       
@@ -211,7 +269,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/28/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/" data-id="ckznacxys0001xwuhdkada453" data-title="学习资源" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/28/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/" data-id="ckznvgnn8000220uhcm2l4m22" data-title="学习资源" class="article-share-link">Share</a>
       
       
       
@@ -262,7 +320,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/28/hello-world/" data-id="ckznacxyn0000xwuhfsfo2wr7" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/28/hello-world/" data-id="ckznvgnn6000120uh0alwf6ni" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -303,6 +361,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/02/15/git-%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%B9%E6%B3%95/">git 撤销修改的方法</a>
+          </li>
         
           <li>
             <a href="/2022/02/14/%E9%87%8D%E6%8B%BEjava-java-%E4%B8%AD%E7%9A%84%E9%9B%86%E5%90%88/">重拾java: jav中的集合（collection）</a>
