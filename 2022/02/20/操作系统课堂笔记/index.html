@@ -14,7 +14,7 @@
 <meta property="og:description" content="清华大学os网课笔记操作系统的概述 操作系统是一个控制程序  管理应用程序，  为应用程序提供服务  杀死程序  资源管理：管理外设，分配资源  作为抽象层在物理层之上  作为系统软件为应用软件提供支持  面向应用程序的接口：shell  面向计算机内部的接口:kernal  硬件三大套：cpu 内存 磁盘  os kernel的特征：    *并发**：一段时间内多个程序同时运行    并行*:">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-20T20:15:25.000Z">
-<meta property="article:modified_time" content="2022-02-21T10:26:12.708Z">
+<meta property="article:modified_time" content="2022-02-21T19:22:05.875Z">
 <meta property="article:author" content="dwdw666">
 <meta name="twitter:card" content="summary">
   
@@ -141,13 +141,56 @@
 <li>未来的发展趋势：多核多处理，分布式操作系统</li>
 </ul>
 <h3 id="操作系统结构"><a href="#操作系统结构" class="headerlink" title="操作系统结构"></a>操作系统结构</h3><ul>
-<li></li>
+<li>微内核设计：尽然把内核服务放到用户空间。中断处理，消息传递 放到内核中。<br>文件系统，网络协议放到用户空间，以服务的方式松耦合存在，而非函数调用的方式。<br>代价是性能。</li>
+</ul>
+<h3 id="操作系统启动"><a href="#操作系统启动" class="headerlink" title="操作系统启动"></a>操作系统启动</h3><ul>
+<li>bios-&gt;bootloader-&gt;os</li>
+<li>disk：存放os</li>
+<li>bios：基本io处理系统，开机检验外设</li>
+<li>bootloader：加载os，让os从硬盘到内存中去</li>
+<li>bios从一个特定的地址执行，cs：ip（cs:段寄存器，ip：指令寄存器）</li>
+<li>bootloader一般放在disk的第一个主引导扇区（512字节）</li>
+</ul>
+<h3 id="操作系统中的事件：中断，异常和系统调用"><a href="#操作系统中的事件：中断，异常和系统调用" class="headerlink" title="操作系统中的事件：中断，异常和系统调用"></a>操作系统中的事件：中断，异常和系统调用</h3><ul>
+<li><strong>系统调用</strong>：<strong>异步或同步</strong>，来源于应用程序，应用程序主动向os发出服务请求</li>
+<li><strong>异常</strong>：<strong>同步</strong>，来源于不良的应用程序，非法指令（内存出错）</li>
+<li><strong>中断</strong>：<strong>异步</strong>，来源于外设（鼠标的移动，键盘的输入），不同的硬件设备的计时器和网络的中断</li>
+<li>应用程序不能直接访问外设。内核是被信任的，内核统一的向程序暴露接口。</li>
+</ul>
+<h3 id="计算机体系结构-内存分层"><a href="#计算机体系结构-内存分层" class="headerlink" title="计算机体系结构/内存分层"></a>计算机体系结构/内存分层</h3><ul>
+<li>抽象：逻辑地址空间</li>
+<li>保护：独立地址空间</li>
+<li>共享：访问相同内容</li>
+<li>虚拟化：更多的地址空间</li>
+<li>主存：物理内存，接电从硬盘读数据到主存</li>
+</ul>
+<h3 id="地址空间"><a href="#地址空间" class="headerlink" title="地址空间"></a>地址空间</h3><ul>
+<li>物理地址空间—内存条代表的贮存，硬盘代表的磁盘</li>
+<li>逻辑地址空间—一个运行的程序所拥有的内存范围 （0，max）</li>
+<li>cpu—mmu查找逻辑地址对应的物理地址，如果没找到就到内存中去找<br>操作系统需要建立逻辑地址和物理地址的关系。</li>
+<li>操作系统的地址安全检测</li>
+</ul>
+<h3 id="连续内存分配"><a href="#连续内存分配" class="headerlink" title="连续内存分配"></a>连续内存分配</h3><ul>
+<li>空闲内存不能被利用</li>
+<li>外部碎片</li>
+<li>内部碎片</li>
+</ul>
+<h3 id="内存分配的算发"><a href="#内存分配的算发" class="headerlink" title="内存分配的算发"></a>内存分配的算发</h3><ul>
+<li><code>首次适配（first fit）</code>：找到第一个满足 程序需求的连续空闲块  </li>
+<li><em>优点</em>*:简单  </li>
+<li><em>缺点</em>*:容易产生不合适的空闲块</li>
+<li><code>最佳匹配</code>：使用最小的满足要求的空闲块</li>
+<li><em>优点</em>*:简单</li>
+<li><em>缺点</em>*:容易产生不合适的空闲块</li>
+<li><code>最差分配原则</code>：使用最大的满足要求的空闲快</li>
+<li>*优点**：分配中等尺寸效果最好</li>
+<li>*劣势**：</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" data-id="ckzwk0kcc00076suh9kal8odg" data-title="操作系统课堂笔记" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" data-id="ckzzegstw0005csuh6m037j6e" data-title="操作系统课堂笔记" class="article-share-link">Share</a>
       
       
       
