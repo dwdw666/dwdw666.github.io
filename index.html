@@ -173,22 +173,67 @@
 <li>外部碎片</li>
 <li>内部碎片</li>
 </ul>
-<h3 id="内存分配的算发"><a href="#内存分配的算发" class="headerlink" title="内存分配的算发"></a>内存分配的算发</h3><ul>
-<li><code>首次适配（first fit）</code>：找到第一个满足 程序需求的连续空闲块  </li>
+<h3 id="分区的动态分配"><a href="#分区的动态分配" class="headerlink" title="分区的动态分配"></a>分区的动态分配</h3><ul>
+<li><code>首次适配（first fit）</code>：找到第一个满足 程序需求的连续空闲块    </li>
 <li><em>优点</em>*:简单  </li>
-<li><em>缺点</em>*:容易产生不合适的空闲块</li>
-<li><code>最佳匹配</code>：使用最小的满足要求的空闲块</li>
-<li><em>优点</em>*:简单</li>
-<li><em>缺点</em>*:容易产生不合适的空闲块</li>
-<li><code>最差分配原则</code>：使用最大的满足要求的空闲快</li>
-<li>*优点**：分配中等尺寸效果最好</li>
+<li><em>缺点</em>*:容易产生不合适的空闲块  </li>
+<li><code>最佳匹配（best fit）</code>：使用最小的满足要求的空闲块     </li>
+<li><em>优点</em>*:简单  </li>
+<li><em>缺点</em>*:容易产生不合适的空闲块  </li>
+<li><code>最差分配原则(worst fit)</code>：使用最大的满足要求的空闲快  </li>
+<li>*优点**：分配中等尺寸效果最好  </li>
 <li>*劣势**：</li>
+</ul>
+<h3 id="连续的内存分配算法"><a href="#连续的内存分配算法" class="headerlink" title="连续的内存分配算法"></a>连续的内存分配算法</h3><ul>
+<li>压缩式</li>
+<li>交换式</li>
+</ul>
+<h3 id="非连续内存分配：分段"><a href="#非连续内存分配：分段" class="headerlink" title="非连续内存分配：分段"></a>非连续内存分配：分段</h3><ul>
+<li>难点在于逻辑地址到物理地址的映射</li>
+<li>操作系统维护段表</li>
+</ul>
+<h3 id="非连续内存的分配：分页"><a href="#非连续内存的分配：分页" class="headerlink" title="非连续内存的分配：分页"></a>非连续内存的分配：分页</h3><ul>
+<li>划分物理内存大小—帧frame   <ul>
+<li>一个物理地址是一个二元数组（f，o）</li>
+<li>f—帧号（F位，一共有2的F次方个帧）</li>
+<li>o—帧内偏移位（s位，每帧有s的s次方字节）</li>
+<li>物理地址 <code>2^s*f + o</code></li>
+</ul>
+</li>
+<li>划分逻辑地址—页page  <ul>
+<li>一个程序的逻辑地址空间被划分为大小相等的页</li>
+<li>页内偏移的大小</li>
+</ul>
+</li>
+<li>页表<ul>
+<li>页表</li>
+</ul>
+</li>
+<li>建立方案 转换逻辑地址为物理地址page to frames</li>
+<li>cpu根据page number和 offeset在page table内寻址，之后根据找到的frame number 和offset去物理地址寻址</li>
+<li>快表TLB使用关联内存实现</li>
+<li>页表太大的问题：使用多级页表<ul>
+<li>多级页表的最后一层才是真正的寻找物理地址</li>
+</ul>
+</li>
+<li><strong>反向页表</strong><br>*基于hash的方向页表： </li>
+</ul>
+<h3 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h3><ul>
+<li>覆盖技术：使用分时的方式用同一块内存空间，需要确定各个模块的覆盖关系。</li>
+<li>交换技术：操作系统管理程序，swap out吧一个进程的整个地址空间的内容包窜到外存中，<br>而将外村中的某个进程的地址空间读入到内存中(swap in)。<ul>
+<li><strong>交换时机的确定</strong>：只有当内存空间不够或者有不够的危险时换出</li>
+<li><strong>交换区的大小</strong>：</li>
+<li><strong>程序换入的重定位</strong>：换入换出在物理地址上不用在同一个地方，只需要更改页表，使得逻辑地址映射到同一个物理地址。<h3 id="虚存技术"><a href="#虚存技术" class="headerlink" title="虚存技术"></a>虚存技术</h3></li>
+</ul>
+</li>
+<li>不是替换整个进程的内存空间，而是部分替换。</li>
+<li></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" data-id="ckzzegstw0005csuh6m037j6e" data-title="操作系统课堂笔记" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" data-id="cl017jl3m000aqsuh3jyog1uv" data-title="操作系统课堂笔记" class="article-share-link">Share</a>
       
       
       
@@ -226,7 +271,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/20/vocabulaire/" data-id="ckzzegstw0006csuha4fv7znv" data-title="vocabulaire" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/20/vocabulaire/" data-id="cl017jl3j0006qsuhf2zwhz0v" data-title="vocabulaire" class="article-share-link">Share</a>
       
       
       
@@ -287,7 +332,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/18/toList/" data-id="ckzzegstt0002csuhfaimc5hs" data-title="toList" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/18/toList/" data-id="cl017jl3g0004qsuh7bwah0et" data-title="toList" class="article-share-link">Share</a>
       
       
       
@@ -360,7 +405,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/15/java%E4%B8%AD%E7%9A%84%E9%87%8D%E5%86%99%E4%B8%8E%E9%87%8D%E8%BD%BD/" data-id="ckzzegstu0003csuh0mve8p3s" data-title="java中的重写与重载" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/15/java%E4%B8%AD%E7%9A%84%E9%87%8D%E5%86%99%E4%B8%8E%E9%87%8D%E8%BD%BD/" data-id="cl017jl380002qsuhd70g6fmd" data-title="java中的重写与重载" class="article-share-link">Share</a>
       
       
       
@@ -422,7 +467,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/15/git-%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%B9%E6%B3%95/" data-id="ckzzegstq0001csuhhre805yj" data-title="git 撤销修改的方法" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/15/git-%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%B9%E6%B3%95/" data-id="cl017jl340001qsuhh2ceevgh" data-title="git 撤销修改的方法" class="article-share-link">Share</a>
       
       
       
@@ -471,7 +516,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/14/%E9%87%8D%E6%8B%BEjava-java-%E4%B8%AD%E7%9A%84%E9%9B%86%E5%90%88/" data-id="ckzzegsuc000fcsuh74wp7bsi" data-title="重拾java: jav中的集合（collection）" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/14/%E9%87%8D%E6%8B%BEjava-java-%E4%B8%AD%E7%9A%84%E9%9B%86%E5%90%88/" data-id="cl017jl3n000bqsuh8xtd0vlp" data-title="重拾java: jav中的集合（collection）" class="article-share-link">Share</a>
       
       
       
@@ -510,16 +555,17 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><h3 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h3><ul>
-<li>152.乘积最大子序列               2/13/2022</li>
-<li>5.最长回文字串                   2/13/2022<h3 id="轮转数组"><a href="#轮转数组" class="headerlink" title="轮转数组"></a>轮转数组</h3></li>
-<li>189.轮转数组 2/19/2022<h3 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h3></li>
-<li>283.移动零 2/20/2022</li>
+<li>152.乘积最大子序列               2022/2/13</li>
+<li>5.最长回文字串                   2022/2/13<h3 id="轮转数组"><a href="#轮转数组" class="headerlink" title="轮转数组"></a>轮转数组</h3></li>
+<li>189.轮转数组 2022/2/19<h3 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h3></li>
+<li>283.移动零 2022/2/20<h3 id="打乱数组"><a href="#打乱数组" class="headerlink" title="打乱数组"></a>打乱数组</h3></li>
+<li>384.打乱数组 2022/2/24</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/13/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0/" data-id="ckzzegsuc000dcsuhf8z7fm1j" data-title="算法刷题日记" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/13/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0/" data-id="cl017jl3k0007qsuh6nnx0f5q" data-title="算法刷题日记" class="article-share-link">Share</a>
       
       
       
@@ -581,7 +627,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/28/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/" data-id="ckzzegsub000bcsuh3qqg0za6" data-title="学习资源" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/28/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/" data-id="cl017jl3l0009qsuh150ieowe" data-title="学习资源" class="article-share-link">Share</a>
       
       
       
@@ -632,7 +678,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/28/hello-world/" data-id="ckzzegstv0004csuh6aqfdvw3" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/28/hello-world/" data-id="cl017jl390003qsuh4jlndqy6" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
