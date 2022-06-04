@@ -6,15 +6,15 @@
   
   <title>JVM程序计数器 VS OS程序计数器 | dwdw666的笔记本</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="JVM程序计数器 VS OS程序计数器学完了操作系统后在学到jvm时看到了程序计数器，那他们有什么关系呢？ jvm内存模型中的PC程序计数器 与 OS操作系统程序计数器 的关系 JVM程序计数器：程序计数器是一块较小的内存空间，它的作用可以看作是当前线程所执行的字节码的行号指示器。在虚拟机的概念模型里字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异">
+  <meta name="description" content="学完了操作系统后在学到jvm时看到了程序计数器，那他们有什么关系呢？ jvm内存模型中的PC程序计数器 与 OS操作系统程序计数器 的关系 JVM程序计数器：程序计数器是一块较小的内存空间，它的作用可以看作是当前线程所执行的字节码的行号指示器。在虚拟机的概念模型里字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等基础功能都需要依赖这">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JVM程序计数器 VS OS程序计数器">
 <meta property="og:url" content="http://example.com/2022/02/10/JVM%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8-VS-OS%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8/index.html">
 <meta property="og:site_name" content="dwdw666的笔记本">
-<meta property="og:description" content="JVM程序计数器 VS OS程序计数器学完了操作系统后在学到jvm时看到了程序计数器，那他们有什么关系呢？ jvm内存模型中的PC程序计数器 与 OS操作系统程序计数器 的关系 JVM程序计数器：程序计数器是一块较小的内存空间，它的作用可以看作是当前线程所执行的字节码的行号指示器。在虚拟机的概念模型里字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异">
+<meta property="og:description" content="学完了操作系统后在学到jvm时看到了程序计数器，那他们有什么关系呢？ jvm内存模型中的PC程序计数器 与 OS操作系统程序计数器 的关系 JVM程序计数器：程序计数器是一块较小的内存空间，它的作用可以看作是当前线程所执行的字节码的行号指示器。在虚拟机的概念模型里字节码解释器工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等基础功能都需要依赖这">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-10T20:25:57.000Z">
-<meta property="article:modified_time" content="2022-06-04T19:27:37.439Z">
+<meta property="article:modified_time" content="2022-06-04T19:29:39.363Z">
 <meta property="article:author" content="dwdw666">
 <meta name="twitter:card" content="summary">
   
@@ -99,7 +99,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="JVM程序计数器-VS-OS程序计数器"><a href="#JVM程序计数器-VS-OS程序计数器" class="headerlink" title="JVM程序计数器 VS OS程序计数器"></a><strong><strong>JVM程序计数器 VS OS程序计数器</strong></strong></h1><p>学完了操作系统后在学到jvm时看到了程序计数器，那他们有什么关系呢？</p>
+        <p>学完了操作系统后在学到jvm时看到了程序计数器，那他们有什么关系呢？</p>
 <p>jvm内存模型中的PC程序计数器 与 OS操作系统程序计数器 的关系</p>
 <h3 id="JVM程序计数器："><a href="#JVM程序计数器：" class="headerlink" title="JVM程序计数器："></a><strong>JVM程序计数器：</strong></h3><p>程序计数器是一块较小的内存空间，它的作用可以看作是<strong>当前线程所执行的字节码的行号指示器</strong>。在虚拟机的概念模型里<strong>字节码解释器</strong>工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等基础功能都需要依赖这个计数器来完成。- - 摘自《深入理解Java虚拟机》</p>
 <h3 id="OS程序计数器"><a href="#OS程序计数器" class="headerlink" title="OS程序计数器"></a><strong>OS程序计数器</strong></h3><p>为了保证程序(在操作系统中理解为进程)能够连续地执行下去，CPU必须具有某些手段来确定下一条指令的地址。而程序计数器正是起到这种作用，所以通常又称为指令计数器。在程序开始执行前，必须将它的起始地址，即程序的一条指令所在的内存单元地址送入PC，因此程序计数器（PC）的内容即是从内存提取的第一条指令的地址。当执行指令时，CPU将自动修改PC的内容，即每执行一条指令PC增加一个量，这个量等于指令所含的字节数，以便使其保持的总是将要执行的下一条指令的地址。由于大多数指令都是按顺序来执行的，所以修改的过程通常只是简单的对PC加1。 当程序转移时，转移指令执行的最终结果就是要改变PC的值，此PC值就是转去的地址，以此实现转移。有些机器中也称PC为指令指针IP（Instruction Pointer）</p>
@@ -108,7 +108,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/10/JVM%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8-VS-OS%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8/" data-id="cl409phxy00014guh7lkg4irq" data-title="JVM程序计数器 VS OS程序计数器" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/10/JVM%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8-VS-OS%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8/" data-id="cl409s1lp00017cuhbliqek9y" data-title="JVM程序计数器 VS OS程序计数器" class="article-share-link">Share</a>
       
       
       
