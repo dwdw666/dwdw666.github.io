@@ -71,6 +71,116 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-如何得到一个干净的shinyBoard文件" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/07/%E5%A6%82%E4%BD%95%E5%BE%97%E5%88%B0%E4%B8%80%E4%B8%AA%E5%B9%B2%E5%87%80%E7%9A%84shinyBoard%E6%96%87%E4%BB%B6/" class="article-date">
+  <time class="dt-published" datetime="2022-06-07T15:40:27.000Z" itemprop="datePublished">2022-06-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/R/">R</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/07/%E5%A6%82%E4%BD%95%E5%BE%97%E5%88%B0%E4%B8%80%E4%B8%AA%E5%B9%B2%E5%87%80%E7%9A%84shinyBoard%E6%96%87%E4%BB%B6/">如何得到一个干净的shinyBoard文件</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>使用shinyBoard的时候所有的东西都写在同一个app.r里面实在是丑陋</p>
+<p>查了官方的问文档和教程都是写在app.r里面的</p>
+<p>后来找个一个方法 可以把server和ui的文件放在app.r所在的目录下，rstudio会自动检测。</p>
+<p>虽然还是很丑，没有模块化开发的感觉。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/06/07/%E5%A6%82%E4%BD%95%E5%BE%97%E5%88%B0%E4%B8%80%E4%B8%AA%E5%B9%B2%E5%87%80%E7%9A%84shinyBoard%E6%96%87%E4%BB%B6/" data-id="cl44byazw0006f8uhdvysaszv" data-title="如何得到一个干净的shinyBoard文件" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-java-多线程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/04/java-%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="article-date">
+  <time class="dt-published" datetime="2022-06-04T20:23:53.000Z" itemprop="datePublished">2022-06-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/06/04/java-%E5%A4%9A%E7%BA%BF%E7%A8%8B/">java 多线程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="java实现多线程的方式"><a href="#java实现多线程的方式" class="headerlink" title="java实现多线程的方式"></a>java实现多线程的方式</h3><ul>
+<li>继承thred接口</li>
+<li>实现runnable接口</li>
+<li>实现Callable接口</li>
+</ul>
+<h3 id="创建线程的方式"><a href="#创建线程的方式" class="headerlink" title="创建线程的方式"></a>创建线程的方式</h3><ul>
+<li>通过thread类直接创建线程</li>
+<li>利用线程池内部类创建线程</li>
+</ul>
+<h3 id="启动线程的方式"><a href="#启动线程的方式" class="headerlink" title="启动线程的方式"></a>启动线程的方式</h3><ul>
+<li>调用线程的start()方法</li>
+<li>利用线程池内部创建线程  那啥是线程池呢</li>
+</ul>
+<h3 id="上下文切换"><a href="#上下文切换" class="headerlink" title="上下文切换"></a>上下文切换</h3><p>回忆起了操作系统中的pcb，tcb。操作系统在切换线程的时候也会保留下pcb和tcb的信息</p>
+<p>cpu执行线程的任务时，会为线程分配时间片，以下几种情况会发生上下文切换。</p>
+<ol>
+<li>线程的cpu时间片用完</li>
+<li>垃圾回收</li>
+<li>线程自己调用了 sleep、yield、wait、join、park、synchronized、lock 等方法</li>
+</ol>
+<p>当发生上下文切换时，操作系统会保存当前线程的状态，并恢复另一个线程的状态,jvm中有块内存地址叫程序计数器，用于记录线程执行到哪一行代码,是线程私有的。</p>
+<p><a target="_blank" rel="noopener" href="https://dwdw666.github.io/2022/02/10/JVM%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8-VS-OS%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8/"><strong><strong>JVM程序计数器 VS OS程序计数器</strong></strong></a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/06/04/java-%E5%A4%9A%E7%BA%BF%E7%A8%8B/" data-id="cl44byazu0003f8uh22ab7lqx" data-title="java 多线程" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-操作系统课堂笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="article-date">
@@ -233,7 +343,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" data-id="cl409s1lu00057cuh8qr11dfu" data-title="操作系统课堂笔记" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" data-id="cl44byazx0008f8uhcsv0fj1h" data-title="操作系统课堂笔记" class="article-share-link">Share</a>
       
       
       
@@ -280,7 +390,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/18/toList/" data-id="cl409s1lu00047cuh8sp05u8d" data-title="toList" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/18/toList/" data-id="cl44byazv0005f8uh0oa9126d" data-title="toList" class="article-share-link">Share</a>
       
       
       
@@ -355,7 +465,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/15/java%E4%B8%AD%E7%9A%84%E9%87%8D%E5%86%99%E4%B8%8E%E9%87%8D%E8%BD%BD/" data-id="cl409s1lt00037cuhfihjetww" data-title="java中的重写与重载" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/15/java%E4%B8%AD%E7%9A%84%E9%87%8D%E5%86%99%E4%B8%8E%E9%87%8D%E8%BD%BD/" data-id="cl44byazv0004f8uheq4z019i" data-title="java中的重写与重载" class="article-share-link">Share</a>
       
       
       
@@ -417,7 +527,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/15/git-%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%B9%E6%B3%95/" data-id="cl409s1ls00027cuh97d2a74x" data-title="git 撤销修改的方法" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/15/git-%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%B9%E6%B3%95/" data-id="cl44byazt0002f8uh8iif78rx" data-title="git 撤销修改的方法" class="article-share-link">Share</a>
       
       
       
@@ -466,7 +576,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/14/%E9%87%8D%E6%8B%BEjava-java-%E4%B8%AD%E7%9A%84%E9%9B%86%E5%90%88/" data-id="cl409s1lw00087cuh1olr3pg0" data-title="重拾java: jav中的集合（collection）" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/14/%E9%87%8D%E6%8B%BEjava-java-%E4%B8%AD%E7%9A%84%E9%9B%86%E5%90%88/" data-id="cl44byb01000af8uh3q2z3ljj" data-title="重拾java: jav中的集合（collection）" class="article-share-link">Share</a>
       
       
       
@@ -513,7 +623,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/13/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0/" data-id="cl409s1lw00077cuhdfmi5kpw" data-title="算法刷题日记" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/13/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0/" data-id="cl44byazy0009f8uheek91ael" data-title="算法刷题日记" class="article-share-link">Share</a>
       
       
       
@@ -562,7 +672,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/10/JVM%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8-VS-OS%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8/" data-id="cl409s1lp00017cuhbliqek9y" data-title="JVM程序计数器 VS OS程序计数器" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/10/JVM%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8-VS-OS%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8/" data-id="cl44byazp0001f8uhbfcv8la9" data-title="JVM程序计数器 VS OS程序计数器" class="article-share-link">Share</a>
       
       
       
@@ -625,7 +735,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/28/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/" data-id="cl409s1lv00067cuhg28f6211" data-title="学习资源" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/01/28/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/" data-id="cl44byazx0007f8uhcel9163n" data-title="学习资源" class="article-share-link">Share</a>
       
       
       
@@ -647,7 +757,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git%E4%BD%BF%E7%94%A8/">Git使用</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/TodoList/">TodoList</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/os/">os</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Git%E4%BD%BF%E7%94%A8/">Git使用</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/R/">R</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/TodoList/">TodoList</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/os/">os</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li></ul>
     </div>
   </div>
 
@@ -676,7 +786,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li></ul>
     </div>
   </div>
 
@@ -689,6 +799,14 @@
       <ul>
         
           <li>
+            <a href="/2022/06/07/%E5%A6%82%E4%BD%95%E5%BE%97%E5%88%B0%E4%B8%80%E4%B8%AA%E5%B9%B2%E5%87%80%E7%9A%84shinyBoard%E6%96%87%E4%BB%B6/">如何得到一个干净的shinyBoard文件</a>
+          </li>
+        
+          <li>
+            <a href="/2022/06/04/java-%E5%A4%9A%E7%BA%BF%E7%A8%8B/">java 多线程</a>
+          </li>
+        
+          <li>
             <a href="/2022/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/">操作系统课堂笔记</a>
           </li>
         
@@ -698,14 +816,6 @@
         
           <li>
             <a href="/2022/02/15/java%E4%B8%AD%E7%9A%84%E9%87%8D%E5%86%99%E4%B8%8E%E9%87%8D%E8%BD%BD/">java中的重写与重载</a>
-          </li>
-        
-          <li>
-            <a href="/2022/02/15/git-%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%B9%E6%B3%95/">git 撤销修改的方法</a>
-          </li>
-        
-          <li>
-            <a href="/2022/02/14/%E9%87%8D%E6%8B%BEjava-java-%E4%B8%AD%E7%9A%84%E9%9B%86%E5%90%88/">重拾java: jav中的集合（collection）</a>
           </li>
         
       </ul>
