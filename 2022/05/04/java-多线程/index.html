@@ -4,15 +4,23 @@
   <meta charset="utf-8">
   
   
-  <title>dwdw666的笔记本</title>
+  <title>java 多线程 | dwdw666的笔记本</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="dwdw666的笔记本">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="java实现多线程的方式 继承thred接口 实现runnable接口 实现Callable接口  创建线程的方式 通过thread类直接创建线程 利用线程池内部类创建线程  启动线程的方式 调用线程的start()方法 利用线程池内部创建线程  那啥是线程池呢  上下文切换回忆起了操作系统中的pcb，tcb。操作系统在切换线程的时候也会保留下pcb和tcb的信息 cpu执行线程的任务时，会为线程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java 多线程">
+<meta property="og:url" content="http://example.com/2022/05/04/java-%E5%A4%9A%E7%BA%BF%E7%A8%8B/index.html">
 <meta property="og:site_name" content="dwdw666的笔记本">
+<meta property="og:description" content="java实现多线程的方式 继承thred接口 实现runnable接口 实现Callable接口  创建线程的方式 通过thread类直接创建线程 利用线程池内部类创建线程  启动线程的方式 调用线程的start()方法 利用线程池内部创建线程  那啥是线程池呢  上下文切换回忆起了操作系统中的pcb，tcb。操作系统在切换线程的时候也会保留下pcb和tcb的信息 cpu执行线程的任务时，会为线程">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8678ca5e-e2f0-42d2-94e0-44a35d06ce01/Untitled.png">
+<meta property="og:image" content="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/728f1c95-878a-441c-91f3-4a500b478b89/93f311262656412c83a99b9c03b4815e_tplv-k3u1fbpfcp-zoom-1.png">
+<meta property="og:image" content="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2485cb7d-fd88-489e-94d8-7e21590e4939/Untitled.png">
+<meta property="article:published_time" content="2022-05-04T20:23:53.000Z">
+<meta property="article:modified_time" content="2022-06-08T20:26:31.303Z">
 <meta property="article:author" content="dwdw666">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8678ca5e-e2f0-42d2-94e0-44a35d06ce01/Untitled.png">
   
     <link rel="alternate" href="/atom.xml" title="dwdw666的笔记本" type="application/atom+xml">
   
@@ -69,58 +77,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-如何得到一个干净的shinyBoard文件" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/06/07/%E5%A6%82%E4%BD%95%E5%BE%97%E5%88%B0%E4%B8%80%E4%B8%AA%E5%B9%B2%E5%87%80%E7%9A%84shinyBoard%E6%96%87%E4%BB%B6/" class="article-date">
-  <time class="dt-published" datetime="2022-06-07T15:40:27.000Z" itemprop="datePublished">2022-06-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/R/">R</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/06/07/%E5%A6%82%E4%BD%95%E5%BE%97%E5%88%B0%E4%B8%80%E4%B8%AA%E5%B9%B2%E5%87%80%E7%9A%84shinyBoard%E6%96%87%E4%BB%B6/">如何得到一个干净的shinyBoard文件</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        这是一篇加密文章，需要密码才能继续阅读。
-        
-          <p class="article-more-link">
-            <a href="/2022/06/07/%E5%A6%82%E4%BD%95%E5%BE%97%E5%88%B0%E4%B8%80%E4%B8%AA%E5%B9%B2%E5%87%80%E7%9A%84shinyBoard%E6%96%87%E4%BB%B6/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/07/%E5%A6%82%E4%BD%95%E5%BE%97%E5%88%B0%E4%B8%80%E4%B8%AA%E5%B9%B2%E5%87%80%E7%9A%84shinyBoard%E6%96%87%E4%BB%B6/" data-id="cl461klkv0005kkuhdjlva79t" data-title="如何得到一个干净的shinyBoard文件" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/private/" rel="tag">private</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-java-多线程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-java-多线程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/05/04/java-%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="article-date">
   <time class="dt-published" datetime="2022-05-04T20:23:53.000Z" itemprop="datePublished">2022-05-04</time>
@@ -137,8 +94,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/04/java-%E5%A4%9A%E7%BA%BF%E7%A8%8B/">java 多线程</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      java 多线程
     </h1>
   
 
@@ -226,577 +183,28 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-操作系统课堂笔记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time class="dt-published" datetime="2022-02-20T20:15:25.000Z" itemprop="datePublished">2022-02-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/os/">os</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2022/06/07/%E5%A6%82%E4%BD%95%E5%BE%97%E5%88%B0%E4%B8%80%E4%B8%AA%E5%B9%B2%E5%87%80%E7%9A%84shinyBoard%E6%96%87%E4%BB%B6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
+          如何得到一个干净的shinyBoard文件
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/">操作系统课堂笔记</a>
-    </h1>
   
+    <a href="/2022/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">操作系统课堂笔记</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="清华大学os网课笔记"><a href="#清华大学os网课笔记" class="headerlink" title="清华大学os网课笔记"></a>清华大学os网课笔记</h1><h3 id="操作系统的概述"><a href="#操作系统的概述" class="headerlink" title="操作系统的概述"></a>操作系统的概述</h3><ul>
-<li><p>操作系统是一个控制程序</p>
-</li>
-<li><p>管理应用程序，</p>
-</li>
-<li><p>为应用程序提供服务</p>
-</li>
-<li><p>杀死程序</p>
-</li>
-<li><p>资源管理：管理外设，分配资源</p>
-</li>
-<li><p>作为抽象层在物理层之上</p>
-</li>
-<li><p>作为系统软件为应用软件提供支持</p>
-</li>
-<li><p>面向应用程序的接口：<code>shell</code></p>
-</li>
-<li><p>面向计算机内部的接口:<code>kernal</code></p>
-</li>
-<li><p>硬件三大套：cpu 内存 磁盘</p>
-</li>
-<li><p>os kernel的特征：  </p>
-</li>
-<li><p>*并发**：一段时间内多个程序同时运行  </p>
-</li>
-<li><p><em>并行</em>*: 一个时间点内多个程序同时运行（多个cpu）   </p>
-</li>
-<li><p>*共享**：同时访问，互斥共享  </p>
-</li>
-<li><p>*虚拟**：cpu-&gt;进程，磁盘-&gt;文件，内存-&gt;地址空间。多道文件设计，让用户觉得自己独享整个计算机。  </p>
-</li>
-<li><p>*异步**：程序的执行是走走停停的,向前推进的速度不可预知。到那时只要环境相同，运行的结果也要相同。  </p>
-</li>
-</ul>
-<h3 id="操作系统历史"><a href="#操作系统历史" class="headerlink" title="操作系统历史"></a>操作系统历史</h3><ul>
-<li>移动终端上<strong>linux</strong>应用广泛 </li>
-<li>cpu性能越越强</li>
-<li>多道程序设计</li>
-<li>分时调度：在于时钟会定时产生<strong>中断</strong>，每千分之一秒</li>
-<li>未来的发展趋势：多核多处理，分布式操作系统</li>
-</ul>
-<h3 id="操作系统结构"><a href="#操作系统结构" class="headerlink" title="操作系统结构"></a>操作系统结构</h3><ul>
-<li>微内核设计：尽然把内核服务放到用户空间。中断处理，消息传递 放到内核中。<br>文件系统，网络协议放到用户空间，以服务的方式松耦合存在，而非函数调用的方式。<br>代价是性能。</li>
-</ul>
-<h3 id="操作系统启动"><a href="#操作系统启动" class="headerlink" title="操作系统启动"></a>操作系统启动</h3><ul>
-<li>bios-&gt;bootloader-&gt;os</li>
-<li>disk：存放os</li>
-<li>bios：基本io处理系统，开机检验外设</li>
-<li>bootloader：加载os，让os从硬盘到内存中去</li>
-<li>bios从一个特定的地址执行，cs：ip（cs:段寄存器，ip：指令寄存器）</li>
-<li>bootloader一般放在disk的第一个主引导扇区（512字节）</li>
-</ul>
-<h3 id="操作系统中的事件：中断，异常和系统调用"><a href="#操作系统中的事件：中断，异常和系统调用" class="headerlink" title="操作系统中的事件：中断，异常和系统调用"></a>操作系统中的事件：中断，异常和系统调用</h3><ul>
-<li><strong>系统调用</strong>：<strong>异步或同步</strong>，来源于应用程序，应用程序主动向os发出服务请求</li>
-<li><strong>异常</strong>：<strong>同步</strong>，来源于不良的应用程序，非法指令（内存出错）</li>
-<li><strong>中断</strong>：<strong>异步</strong>，来源于外设（鼠标的移动，键盘的输入），不同的硬件设备的计时器和网络的中断</li>
-<li>应用程序不能直接访问外设。内核是被信任的，内核统一的向程序暴露接口。</li>
-</ul>
-<h3 id="计算机体系结构-内存分层"><a href="#计算机体系结构-内存分层" class="headerlink" title="计算机体系结构/内存分层"></a>计算机体系结构/内存分层</h3><ul>
-<li>抽象：逻辑地址空间</li>
-<li>保护：独立地址空间</li>
-<li>共享：访问相同内容</li>
-<li>虚拟化：更多的地址空间</li>
-<li>主存：物理内存，接电从硬盘读数据到主存</li>
-</ul>
-<h3 id="地址空间"><a href="#地址空间" class="headerlink" title="地址空间"></a>地址空间</h3><ul>
-<li>物理地址空间—内存条代表的贮存，硬盘代表的磁盘</li>
-<li>逻辑地址空间—一个运行的程序所拥有的内存范围 （0，max）</li>
-<li>cpu—mmu查找逻辑地址对应的物理地址，如果没找到就到内存中去找<br>操作系统需要建立逻辑地址和物理地址的关系。</li>
-<li>操作系统的地址安全检测</li>
-</ul>
-<h3 id="连续内存分配"><a href="#连续内存分配" class="headerlink" title="连续内存分配"></a>连续内存分配</h3><ul>
-<li>空闲内存不能被利用</li>
-<li>外部碎片</li>
-<li>内部碎片</li>
-</ul>
-<h3 id="分区的动态分配"><a href="#分区的动态分配" class="headerlink" title="分区的动态分配"></a>分区的动态分配</h3><ul>
-<li><code>首次适配（first fit）</code>：找到第一个满足 程序需求的连续空闲块    </li>
-<li><em>优点</em>*:简单  </li>
-<li><em>缺点</em>*:容易产生不合适的空闲块  </li>
-<li><code>最佳匹配（best fit）</code>：使用最小的满足要求的空闲块     </li>
-<li><em>优点</em>*:简单  </li>
-<li><em>缺点</em>*:容易产生不合适的空闲块  </li>
-<li><code>最差分配原则(worst fit)</code>：使用最大的满足要求的空闲快  </li>
-<li>*优点**：分配中等尺寸效果最好  </li>
-<li>*劣势**：</li>
-</ul>
-<h3 id="连续的内存分配算法"><a href="#连续的内存分配算法" class="headerlink" title="连续的内存分配算法"></a>连续的内存分配算法</h3><ul>
-<li>压缩式</li>
-<li>交换式</li>
-</ul>
-<h3 id="非连续内存分配：分段"><a href="#非连续内存分配：分段" class="headerlink" title="非连续内存分配：分段"></a>非连续内存分配：分段</h3><ul>
-<li>难点在于逻辑地址到物理地址的映射</li>
-<li>操作系统维护段表</li>
-</ul>
-<h3 id="非连续内存的分配：分页"><a href="#非连续内存的分配：分页" class="headerlink" title="非连续内存的分配：分页"></a>非连续内存的分配：分页</h3><ul>
-<li>划分物理内存大小—帧frame   <ul>
-<li>一个物理地址是一个二元数组（f，o）</li>
-<li>f—帧号（F位，一共有2的F次方个帧）</li>
-<li>o—帧内偏移位（s位，每帧有s的s次方字节）</li>
-<li>物理地址 <code>2^s*f + o</code></li>
-</ul>
-</li>
-<li>划分逻辑地址—页page  <ul>
-<li>一个程序的逻辑地址空间被划分为大小相等的页</li>
-<li>页内偏移的大小</li>
-</ul>
-</li>
-<li>页表<ul>
-<li>页表</li>
-</ul>
-</li>
-<li>建立方案 转换逻辑地址为物理地址page to frames</li>
-<li>cpu根据page number和 offeset在page table内寻址，之后根据找到的frame number 和offset去物理地址寻址</li>
-<li>快表TLB使用关联内存实现</li>
-<li>页表太大的问题：使用多级页表<ul>
-<li>多级页表的最后一层才是真正的寻找物理地址</li>
-</ul>
-</li>
-<li><strong>反向页表</strong><br>*基于hash的方向页表： </li>
-</ul>
-<h3 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h3><ul>
-<li>覆盖技术：使用分时的方式用同一块内存空间，需要确定各个模块的覆盖关系。</li>
-<li>交换技术：操作系统管理程序，swap out吧一个进程的整个地址空间的内容包窜到外存中，<br>而将外村中的某个进程的地址空间读入到内存中(swap in)。<ul>
-<li><strong>交换时机的确定</strong>：只有当内存空间不够或者有不够的危险时换出</li>
-<li><strong>交换区的大小</strong>：</li>
-<li><strong>程序换入的重定位</strong>：换入换出在物理地址上不用在同一个地方，只需要更改页表，使得逻辑地址映射到同一个物理地址。<h3 id="虚存技术"><a href="#虚存技术" class="headerlink" title="虚存技术"></a>虚存技术</h3></li>
-</ul>
-</li>
-<li>不是替换整个进程的内存空间，而是部分替换。</li>
-<li></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/20/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" data-id="cl461kll00008kkuh23ozdo6y" data-title="操作系统课堂笔记" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-toList" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/18/toList/" class="article-date">
-  <time class="dt-published" datetime="2022-02-18T19:53:09.000Z" itemprop="datePublished">2022-02-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/TodoList/">TodoList</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/02/18/toList/">toList</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        这是一篇加密文章，需要密码才能继续阅读。
-        
-          <p class="article-more-link">
-            <a href="/2022/02/18/toList/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/18/toList/" data-id="cl461klkv0006kkuh3rbs1x4l" data-title="toList" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/private/" rel="tag">private</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-java中的重写与重载" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/15/java%E4%B8%AD%E7%9A%84%E9%87%8D%E5%86%99%E4%B8%8E%E9%87%8D%E8%BD%BD/" class="article-date">
-  <time class="dt-published" datetime="2022-02-15T08:56:50.000Z" itemprop="datePublished">2022-02-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/02/15/java%E4%B8%AD%E7%9A%84%E9%87%8D%E5%86%99%E4%B8%8E%E9%87%8D%E8%BD%BD/">java中的重写与重载</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h2><p>子类重写父类的方法时需要保持参数和返回值的一致性，否则编译器就会报错。<br>下面这个例子我们发现在<em>circle</em>类是属于Shape类对象的一个实例，在编译阶段只会检查<em>Shape</em>类中是否有<em>testPol</em>y这个方法。<br>而在运行阶段<em>jvm</em>则会访问<em>circle</em>实例上的<em>testPoly</em>方法</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public class test&#123;</span><br><span class="line"> public static void main(String args[])&#123;</span><br><span class="line">  Shape circle = new Circle();</span><br><span class="line">  circle.testPoly();</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Shape&#123;</span><br><span class="line"> public void testPoly()&#123;</span><br><span class="line">  System.out.println(&quot;shape&quot;);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Circle extends Shape&#123;</span><br><span class="line"> //重写父类的方法 保持参数和返回值的一致性</span><br><span class="line"> public void testPoly()&#123;</span><br><span class="line">  System.out.println(&quot;circle&quot;);</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="重写的规则（摘自互联网）"><a href="#重写的规则（摘自互联网）" class="headerlink" title="重写的规则（摘自互联网）"></a>重写的规则（摘自互联网）</h3><ul>
-<li><p>参数列表与被重写方法的参数列表必须完全相同。</p>
-</li>
-<li><p>返回类型与被重写方法的返回类型可以不相同，但是必须是父类返回值的派生类（java5 及更早版本返回类型要一样，java7 及更高版本可以不同）。</p>
-</li>
-<li><p>访问权限不能比父类中被重写的方法的访问权限更低。例如：如果父类的一个方法被声明为 public，那么在子类中重写该方法就不能声明为 protected。</p>
-</li>
-<li><p>父类的成员方法只能被它的子类重写。</p>
-</li>
-<li><p>声明为 final 的方法不能被重写。</p>
-</li>
-<li><p>声明为 static 的方法不能被重写，但是能够被再次声明。</p>
-</li>
-<li><p>子类和父类在同一个包中，那么子类可以重写父类所有方法，除了声明为 private 和 final 的方法。</p>
-</li>
-<li><p>子类和父类不在同一个包中，那么子类只能够重写父类的声明为 public 和 protected 的非 final 方法。</p>
-</li>
-<li><p>重写的方法能够抛出任何非强制异常，无论被重写的方法是否抛出异常。但是，重写的方法不能抛出新的强制性异常，或者比被重写方法声明的更广泛的强制性异常，反之则可以。</p>
-</li>
-<li><p>构造方法不能被重写。</p>
-</li>
-<li><p>如果不能继承一个类，则不能重写该类的方法。</p>
-</li>
-</ul>
-<h2 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h2><p>重载的时候必须在类内部，其中 函数的参数列表必须不一样，不然会报错</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public void test1()&#123;</span><br><span class="line">  System.out.println(&quot;test1&quot;);</span><br><span class="line"> &#125;</span><br><span class="line"> public int test1(int param)&#123;</span><br><span class="line">  System.out.println(&quot;test2&quot;);</span><br><span class="line">  return 2;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>类的重写是多态在<strong>父类与子类</strong>中的一种体现，<br>而类的重载是多态在一个<strong>类内部</strong>的一种体现</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/15/java%E4%B8%AD%E7%9A%84%E9%87%8D%E5%86%99%E4%B8%8E%E9%87%8D%E8%BD%BD/" data-id="cl461klku0004kkuh78esgt6p" data-title="java中的重写与重载" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-git-撤销修改的方法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/15/git-%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%B9%E6%B3%95/" class="article-date">
-  <time class="dt-published" datetime="2022-02-15T08:13:37.000Z" itemprop="datePublished">2022-02-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Git%E4%BD%BF%E7%94%A8/">Git使用</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/02/15/git-%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%B9%E6%B3%95/">git 撤销修改的方法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="git基本概念"><a href="#git基本概念" class="headerlink" title="git基本概念"></a>git基本概念</h2><ul>
-<li><strong>工作区：</strong> 工作目录</li>
-<li><strong>暂存区：</strong> （stage）<code>.git</code>文件夹下的index文件，也叫索引</li>
-<li><strong>版本库：</strong> <code>.git</code>文件夹</li>
-</ul>
-<h2 id="撤销修改的方法"><a href="#撤销修改的方法" class="headerlink" title="撤销修改的方法"></a>撤销修改的方法</h2><p><img src="//www.runoob.com/wp-content/uploads/2015/02/1352126739_7909.jpg" alt="工作区，暂存区，版本库之间的关系"></p>
-<ul>
-<li><p>当对工作区修改（或新增）的文件执行 git add 命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。</p>
-</li>
-<li><p>当执行提交操作（<code>git commit</code>）时，暂存区的目录树写到版本库（对象库）中，master 分支会做相应的更新。即 master 指向的目录树就是提交时暂存区的目录树。</p>
-</li>
-<li><p>当执行 <code>git reset HEAD</code> 命令时，暂存区的目录树会被重写，被 master 分支指向的目录树所替换，但是工作区不受影响。</p>
-</li>
-<li><p><code>当执行 git rm --cached &lt;file&gt;</code> 命令时，会直接从暂存区删除文件，工作区则不做出改变。</p>
-</li>
-<li><p>当执行 <code>git checkout .</code> 或者 <code>git checkout -- &lt;file&gt;</code> 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区中的改动。</p>
-</li>
-<li><p>当执行 <code>git checkout HEAD .</code> 或者 <code>git checkout HEAD &lt;file&gt;</code> 命令时，会用 HEAD 指向的 master 分支中的全部或者部分文件替换暂存区和以及工作区中的文件。这个命令也是极具危险性的，因为不但会清除工作区中未提交的改动，也会清除暂存区中未提交的改动。</p>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/15/git-%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%B9%E6%B3%95/" data-id="cl461klkt0002kkuh49bj7z7x" data-title="git 撤销修改的方法" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-重拾java-java-中的集合" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/14/%E9%87%8D%E6%8B%BEjava-java-%E4%B8%AD%E7%9A%84%E9%9B%86%E5%90%88/" class="article-date">
-  <time class="dt-published" datetime="2022-02-14T15:33:41.000Z" itemprop="datePublished">2022-02-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/02/14/%E9%87%8D%E6%8B%BEjava-java-%E4%B8%AD%E7%9A%84%E9%9B%86%E5%90%88/">重拾java: jav中的集合（collection）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>Java的中的 集合框架包含两种类型的容器: 集合（collection）,<br>图（map）。</p>
-<p>###集合（collection）<br>collection有三种子类型：List,Set,Queue。 再是一些抽象是实现类。<br>最后是具体实现类。常用的有：ArrayList,LinkedList,HashSet等等、</p>
-<p>###图（map）<br>遍历map的四种方法</p>
-<ol>
-<li>iterator 遍历<br>collection接口要求所有的子类需要实现iterator()方法<br>返回iterator，注意：iterator()方法是java.lang.Iterable接口,被Collection继承。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//通过 Iterator 遍历实现</span><br><span class="line">List&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();</span><br><span class="line">list.add(1);</span><br><span class="line">list.add(2);</span><br><span class="line">list.add(3);</span><br><span class="line">for(Iterator itr = list.listIterator();itr.hasNext();)&#123;</span><br><span class="line">    System.out.println(itr.next());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/14/%E9%87%8D%E6%8B%BEjava-java-%E4%B8%AD%E7%9A%84%E9%9B%86%E5%90%88/" data-id="cl461kll6000ckkuhegb4a8vk" data-title="重拾java: jav中的集合（collection）" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-算法刷题日记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/13/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0/" class="article-date">
-  <time class="dt-published" datetime="2022-02-13T08:33:06.000Z" itemprop="datePublished">2022-02-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/02/13/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0/">算法刷题日记</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        这是一篇加密文章，需要密码才能继续阅读。
-        
-          <p class="article-more-link">
-            <a href="/2022/02/13/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/13/%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0/" data-id="cl461kll4000bkkuhb5enb4ou" data-title="算法刷题日记" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/private/" rel="tag">private</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-JVM程序计数器-VS-OS程序计数器" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/10/JVM%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8-VS-OS%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8/" class="article-date">
-  <time class="dt-published" datetime="2022-02-10T20:25:57.000Z" itemprop="datePublished">2022-02-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Java/">Java</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/02/10/JVM%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8-VS-OS%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8/">JVM程序计数器 VS OS程序计数器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>学完了操作系统后在学到jvm时看到了程序计数器，那他们有什么关系呢？</p>
-<p>jvm内存模型中的PC程序计数器 与 OS操作系统程序计数器 的关系</p>
-<h3 id="JVM程序计数器："><a href="#JVM程序计数器：" class="headerlink" title="JVM程序计数器："></a><strong>JVM程序计数器：</strong></h3><p>程序计数器是一块较小的内存空间，它的作用可以看作是<strong>当前线程所执行的字节码的行号指示器</strong>。在虚拟机的概念模型里<strong>字节码解释器</strong>工作时就是通过改变这个计数器的值来选取下一条需要执行的字节码指令，分支、循环、跳转、异常处理、线程恢复等基础功能都需要依赖这个计数器来完成。- - 摘自《深入理解Java虚拟机》</p>
-<h3 id="OS程序计数器"><a href="#OS程序计数器" class="headerlink" title="OS程序计数器"></a><strong>OS程序计数器</strong></h3><p>为了保证程序(在操作系统中理解为进程)能够连续地执行下去，CPU必须具有某些手段来确定下一条指令的地址。而程序计数器正是起到这种作用，所以通常又称为指令计数器。在程序开始执行前，必须将它的起始地址，即程序的一条指令所在的内存单元地址送入PC，因此程序计数器（PC）的内容即是从内存提取的第一条指令的地址。当执行指令时，CPU将自动修改PC的内容，即每执行一条指令PC增加一个量，这个量等于指令所含的字节数，以便使其保持的总是将要执行的下一条指令的地址。由于大多数指令都是按顺序来执行的，所以修改的过程通常只是简单的对PC加1。 当程序转移时，转移指令执行的最终结果就是要改变PC的值，此PC值就是转去的地址，以此实现转移。有些机器中也称PC为指令指针IP（Instruction Pointer）</p>
-<p>总滴来说JVM中的程序计数器是对cpu的程序计数器的一种抽象他只是JVM内存空间中的一小块内存，<strong>并不是真正的物理寄存器</strong>。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/10/JVM%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8-VS-OS%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8/" data-id="cl461klkp0001kkuh9310g5s4" data-title="JVM程序计数器 VS OS程序计数器" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-学习资源" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/01/28/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/" class="article-date">
-  <time class="dt-published" datetime="2022-01-28T11:47:41.000Z" itemprop="datePublished">2022-01-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/01/28/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/">学习资源</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Linux学习笔记（强悍值得一看）<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1j_-dd0RSUejJFxFTfW6TgQ">https://pan.baidu.com/s/1j_-dd0RSUejJFxFTfW6TgQ</a>  提取码：fnsh</p>
-<p>4份优质算法刷题笔记<br>链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1yYpZavbtpHGRJbv5zRtWyA">https://pan.baidu.com/s/1yYpZavbtpHGRJbv5zRtWyA</a>  密码: qmi3</p>
-<p>Vim从入门到精通 &amp; Vim中文用户手册<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1eUsJCQb41yG9QVsXVJ6DQQ">https://pan.baidu.com/s/1eUsJCQb41yG9QVsXVJ6DQQ</a>  提取码：5f02</p>
-<p>Redis6.x 入门到精通实战教程<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/share/init?surl=fpaHY1CwBG5KTHlWKv6ycg">https://pan.baidu.com/share/init?surl=fpaHY1CwBG5KTHlWKv6ycg</a>  提取码：c0ox</p>
-<p>Git教程 中文PDF+视频<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/share/init?surl=HBInqhh0R6bd_tUlhDpA4Q">https://pan.baidu.com/share/init?surl=HBInqhh0R6bd_tUlhDpA4Q</a>  提取码：fh7i</p>
-<p>C语言基础资料<br>链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1-f4d0DnJbny3-DMrs6smJA">https://pan.baidu.com/s/1-f4d0DnJbny3-DMrs6smJA</a> 提取码: 49e4</p>
-<p>程序员英语词汇1700词<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1L8nR-ci8iqkZLF61H7PbJw">https://pan.baidu.com/s/1L8nR-ci8iqkZLF61H7PbJw</a>  提取码：gdhj</p>
-<p>计算机专业必看书籍及视频教程<br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/438642229/answer/1841323980">https://www.zhihu.com/question/438642229/answer/1841323980</a></p>
-<p>MySQL基础入门到精通视频教程（内含MySQL34道面试题）<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1fx411X7BD">https://www.bilibili.com/video/BV1fx411X7BD</a></p>
-<p>Java零基础教程视频（适合Java 0基础，Java初学入门）<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Rx411876f">https://www.bilibili.com/video/BV1Rx411876f</a></p>
-<p>一二线城市知名 IT互联网公司名单（最新整理版）出炉！<br><a target="_blank" rel="noopener" href="https://www.lxlinux.net/7856.html">https://www.lxlinux.net/7856.html</a></p>
-<p>GitHub加速插件<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1xukH6MrIuUKijrq0b9NV7A">https://pan.baidu.com/s/1xukH6MrIuUKijrq0b9NV7A</a>  提取码：7ag0</p>
-<p>名校计算机专业学习资料<br>北大：<a target="_blank" rel="noopener" href="https://github.com/lib-pku/libpku">https://github.com/lib-pku/libpku</a></p>
-<p>清华：<a target="_blank" rel="noopener" href="https://github.com/PKUanonym/REKCARC-TSC-UHT">https://github.com/PKUanonym/REKCARC-TSC-UHT</a></p>
-<p>浙大：<a target="_blank" rel="noopener" href="https://github.com/QSCTech/zju-icicles">https://github.com/QSCTech/zju-icicles</a></p>
-<p>计算机基础知识学习笔记PDF版<br>链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1cf1k9FFVYudf-e-UATjO_A">https://pan.baidu.com/s/1cf1k9FFVYudf-e-UATjO_A</a>  提取码: quxu</p>
-<p>操作系统学习笔记PDF版<br>链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1Kn36FLovgZA5vilJftUczg">https://pan.baidu.com/s/1Kn36FLovgZA5vilJftUczg</a>  提取码: gppe</p>
-<p>图解网络（小林）<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1doCAerxNO-3M1vqn820WNg">https://pan.baidu.com/s/1doCAerxNO-3M1vqn820WNg</a>  提取码：5l38</p>
-<p>VMWare安装包及序列号：<br>链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1J34PLr0i2F7Nt3_aScdlrA">https://pan.baidu.com/s/1J34PLr0i2F7Nt3_aScdlrA</a>  提取码: kydn</p>
-<p>Linux内核及各发行版镜像：<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1kyD2dcMOdDAYf5tmBEtn9w">https://pan.baidu.com/s/1kyD2dcMOdDAYf5tmBEtn9w</a> 提取码：2h9v</p>
-<p>MobaXterm安装包：<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1Wsv1BRQiNlk3Yl0bphpeCw">https://pan.baidu.com/s/1Wsv1BRQiNlk3Yl0bphpeCw</a>  提取码：jut6</p>
-<p>IDEA永久激活：<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1Yfc5ft7E2t7IQWIGejFydw">https://pan.baidu.com/s/1Yfc5ft7E2t7IQWIGejFydw</a>  提取码：aabb</p>
-<p>Source Insight破解版：<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1UdpMdFK_mVD1a7y5tak1sA">https://pan.baidu.com/s/1UdpMdFK_mVD1a7y5tak1sA</a>  提取码：vkk5</p>
-<p>java学习路线指南：<br>链接：<a target="_blank" rel="noopener" href="https://github.com/liyupi/code-roadmap/blob/main/docs/roadmap/Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.md">https://github.com/liyupi/code-roadmap/blob/main/docs/roadmap/Java%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF.md</a></p>
-<p>mall商城实战项目文档：<br><a target="_blank" rel="noopener" href="https://macrozheng.github.io/mall-learning/#/foreword/mall_foreword_02">https://macrozheng.github.io/mall-learning/#/foreword/mall_foreword_02</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/01/28/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/" data-id="cl461klkw0007kkuhfvkq40e1" data-title="学习资源" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
